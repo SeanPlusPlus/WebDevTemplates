@@ -1,2 +1,4 @@
-# HTML5 Boilerplate for CSS / JS / HTML
+# HTML5 Boilerplate for HTML / CSS / JS
+
+_three dirs, starting with HTML and building up with each tech_
 
