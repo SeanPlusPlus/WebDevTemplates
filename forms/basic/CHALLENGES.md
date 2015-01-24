@@ -1,3 +1,3 @@
-# JS Challenges
+# Basic Form Challenges
 
-1. Display Hello World in all caps
+1. On submit display the character count for both name and favorite movie
