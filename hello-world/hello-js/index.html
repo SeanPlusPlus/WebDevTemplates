@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
   </head>
-  <body ng-cloak="true">
-    <div class="container" id="home">
+  <body ng-cloak>
+    <div class="container" id="home" ng-controller="MainCtrl">
       <div class="row">
         <div class="col-md-12">
-          <h1>{{hello}}</h1>
+          <h1>{{hello_msg}}</h1>
         </div>
       </div>
     </div>
