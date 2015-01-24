@@ -1,0 +1,11 @@
+body {
+  background-color: #AAA;
+  padding-top: 60px;
+  color: #111;
+}
+
+#home {
+  background-color: #fff;
+  border-radius: 5px;
+  padding-bottom: 100px;
+}
