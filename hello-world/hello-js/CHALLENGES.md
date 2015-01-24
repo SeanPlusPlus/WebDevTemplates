@@ -1,3 +1,3 @@
-# CSS Challenges
+# JS Challenges
 
-1. update the background color for each responsive breakpoint
+1. Display Hello World in all caps
