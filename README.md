@@ -2,5 +2,4 @@
 
 _a collection of my front end templates that I use as starting points for rapid prototyping_
 
-additionally, there are a set of challenges in each directory that I use to teach my intro to web
-dev class
+with each project there is a set of challenges that I use when teaching my web dev class
