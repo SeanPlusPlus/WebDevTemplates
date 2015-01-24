@@ -7,5 +7,9 @@ angular.module('hello.controllers', []).
     // hello msg
     var hello_msg = 'Hello Forms';
     $scope.hello_msg = hello_msg;
-    console.log(hello_msg);
+
+    // submit form callback
+    $scope.submit_data = function() {
+      console.log($scope.user);
+    }
   }]);

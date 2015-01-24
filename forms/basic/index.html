@@ -15,17 +15,17 @@
       <div class="row">
         <div class="col-md-12">
           <h1>{{hello_msg}}</h1>
-          <form class="form-horizontal" id="myForm">
+          <form class="form-horizontal" id="myForm" ng-submit="submit_data()">
             <div class="form-group">
               <label for="inputName" class="col-sm-2 control-label">Name</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputName" placeholder="Name">
+                <input ng-model="user.name" type="text" class="form-control" id="inputName" placeholder="Name">
               </div>
             </div>
             <div class="form-group">
               <label for="inputFavoriteMovie" class="col-sm-2 control-label">Favorite Movie</label>
               <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputFavoriteMovie" placeholder="Favorite Movie">
+                <input ng-model="user.movie" type="text" class="form-control" id="inputFavoriteMovie" placeholder="Favorite Movie">
               </div>
             </div>
             <div class="form-group">
@@ -38,7 +38,7 @@
       </div>
       <div class="row" id="data">
         <div class="col-md-12">
-          <pre>Name:</pre>
+          <pre>{{user | json}}</pre>
         </div>
       </div>
     </div>
