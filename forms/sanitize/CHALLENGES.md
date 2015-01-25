@@ -1,3 +1,3 @@
-# Basic Form Challenges
+# Sanitize Form Challenges
 
-1. On submit display the character count for both name and favorite movie
+1. Add a form element for email address and verify this is correct
