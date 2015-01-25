@@ -5,7 +5,7 @@ angular.module('hello.controllers', []).
   controller('MainCtrl', ['$scope', function ($scope) {
 
     // hello msg
-    var hello_msg = 'Hello Forms';
+    var hello_msg = 'Sanitize Forms';
     $scope.hello_msg = hello_msg;
 
     // submit form callback
