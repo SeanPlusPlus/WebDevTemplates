@@ -1,5 +1,10 @@
 /* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
+@media (max-width: 768px) {
+  #myForm {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {}
