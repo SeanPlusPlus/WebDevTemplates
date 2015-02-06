@@ -1,0 +1,35 @@
+/* 
+  Allow angular.js to be loaded in body, hiding cloaked elements until 
+  templates compile.  The !important is important given that there may be 
+  other selectors that are more specific or come later and might alter display.  
+ */
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+body {
+  padding-top: 60px;
+  color: #111;
+}
+
+#myForm {
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 50px;
+}
+
+.error:focus {
+  border:1px solid #ff4136;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,0,50,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,0,50,.6);
+}
+
+.required-input {
+  color: #ff4136;
+}
+
+#data {
+  margin-top: 20px;
+}
