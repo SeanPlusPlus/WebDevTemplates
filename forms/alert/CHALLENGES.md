@@ -8,3 +8,5 @@ directory._
 1. Change the radio label from "Stoke Level" to "Alert Type". The three options should be "Success",
 "Warning", and "Error". After the user selects the "Alert Type", and presses "Submit", the type of
 Sweet Alert should change according to the one selected.
+
+2. Display the user name in the alert.
