@@ -1,8 +1,8 @@
 'use strict';
 
-var hello = angular.module('hello', ['hello.controllers']);
+var hello = angular.module('hello', ['hello.controllers', 'oitozero.ngSweetAlert']);
 angular.module('hello.controllers', []).
-  controller('MainCtrl', ['$scope', function ($scope) {
+  controller('MainCtrl', ['$scope', 'SweetAlert', function ($scope, SweetAlert) {
 
     // hello msg
     var hello_msg = 'Forms with alerts';
@@ -10,6 +10,12 @@ angular.module('hello.controllers', []).
 
     // submit form callback
     $scope.submit_data = function() {
-      console.log($scope.user);
+
+      // add alert
+      SweetAlert.swal({
+        'title':  'Success',
+        'text':   'We got it!',
+        'type':   'success'
+      });
     }
   }]);
