@@ -6,7 +6,8 @@ solution to the first challenge should be saved to a file named ```challenge1.ht
 directory._
 
 1. Display "hello world" in all caps
-2. Report the frequency of each character in "hello world". Sort the characters from most to least
+2. Display the letters A through Z without typing them out.
+3. Report the frequency of each character in "hello world". Sort the characters from most to least
 common. A tie break should go to the character lower in the alphabet. Wrap your output in a "ul"
 tag with an "li" for each row. Your output should look something like this:
 ```
@@ -17,4 +18,3 @@ e: 1
 h: 1
 r: 1
 ```
-3. Display the letters A through Z without typing them out.
