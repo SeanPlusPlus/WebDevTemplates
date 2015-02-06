@@ -6,3 +6,4 @@ _starting with HTML and building up with each technology_
 2. hello-css
 3. hello-bootstrap
 4. hello-js
+4. hello-angular
