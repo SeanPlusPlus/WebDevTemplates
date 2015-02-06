@@ -1,7 +1,22 @@
 [
-  {"name": "California"},
-  {"name": "Backpacking"},
-  {"name": "Chess"},
-  {"name": "Beer"},
-  {"name": "Bikes"}
+  {
+    "name": "California",
+    "rank": 2
+  },
+  {
+    "name": "Backpacking",
+    "rank": 3
+  },
+  {
+    "name": "Chess",
+    "rank": 5
+  },
+  {
+    "name": "Beer",
+    "rank": 4
+  },
+  {
+    "name": "Bikes",
+    "rank": 1
+  }
 ]
