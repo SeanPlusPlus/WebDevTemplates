@@ -1,4 +1,8 @@
 # HTML5 Boilerplate for HTML / CSS / JS
 
-_three dirs, starting with HTML and building up with each tech_
+_starting with HTML and building up with each technology_
 
+1. hello-html
+2. hello-css
+3. hello-bootstrap
+4. hello-js
