@@ -41,12 +41,40 @@
 
             <!--Favorite Movie-->
             <div class="form-group">
-              <label for="inputFavoriteMovie" class="col-sm-2 control-label">Favorite Movie</label>
+              <label for="inputStoked" class="col-sm-2 control-label required-input">
+                Stoke Level
+                <i class="fa fa-asterisk"></i>
+              </label>
               <div class="col-sm-10">
-                <input ng-model="user.movie" type="text" class="form-control" id="inputFavoriteMovie" placeholder="Favorite Movie">
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                    Option one is this and that&mdash;be sure to include why it's great
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                    Option two can be something else and selecting it will
+                    deselect option one
+                  </label>
+                </div>
+                <div class="radio disabled">
+                  <label>
+                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" >
+                    Option three is disabled
+                  </label>
+                </div>
               </div>
             </div>
             <!--Favorite Movie-->
+
+            <!--Stoked Level-->
+            <div class="form-group">
+              <div class="col-sm-10 col-sm-offset-2">
+              </div>
+            </div>
+            <!--/Stoked Level-->
 
             <!--Submit-->
             <div class="form-group">
