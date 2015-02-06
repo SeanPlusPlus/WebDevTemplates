@@ -5,7 +5,15 @@ angular.module('hello.controllers', []).
   controller('MainCtrl', ['$scope', function ($scope) {
 
     // hello msg
-    var hello_msg = 'Hello World';
+    var hello_msg = 'Some Awesome Things';
     $scope.hello_msg = hello_msg;
-    console.log(hello_msg);
+
+    // awesome_things
+    var awesome_things = [
+      {'name': 'California'},
+      {'name': 'Backpacking'},
+      {'name': 'Chess'}
+    ];
+    $scope.awesome_things = awesome_things;
+    
   }]);
