@@ -5,4 +5,4 @@ _For each challenge listed below, save your answer to a file named challenge#.ht
 solution to the first challenge should be saved to a file named ```challenge1.html``` in this
 directory._
 
-1. On submit display the character count for both name and favorite movie
+1. On submit display the character count for the user name and the user favorite movie
