@@ -6,3 +6,6 @@ solution to the first challenge should be saved to a file named ```challenge1.ht
 directory._
 
 1. Display Hello World in all caps
+2. Write a function that prints the numbers from 1 to 100. But for multiples of three print "Fizz"
+instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of
+both three and five print "FizzBuzz"
