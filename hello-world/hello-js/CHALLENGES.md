@@ -18,3 +18,5 @@ e: 1
 h: 1
 r: 1
 ```
+
+3. Display the letters A through Z without typing them out.
