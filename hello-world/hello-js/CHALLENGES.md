@@ -5,7 +5,7 @@ _For each challenge listed below, save your answer to a file named challenge#.ht
 solution to the first challenge should be saved to a file named ```challenge1.html``` in this
 directory._
 
-1. Display "hello world" in all caps
+1. Display "hello world" in all caps.
 2. Display the letters A through Z without typing them out.
 3. Report the frequency of each character in "hello world". Sort the characters from most to least
 common. A tie break should go to the character lower in the alphabet. Wrap your output in a "ul"
