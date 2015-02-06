@@ -9,7 +9,7 @@ angular.module('hello.controllers', []).
     $scope.hello_msg = hello_msg;
 
     // AJAX call
-    var request = {'method': 'get', 'resource': 'data.json'};
+    var request = {'method': 'get', 'resource': 'awesome.json'};
     helloService.async(request).then(function(response) {
       $scope.awesome_things = response.data;
     });
