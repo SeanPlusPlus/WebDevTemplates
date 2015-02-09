@@ -5,6 +5,7 @@ _For each challenge listed below, save your answer to a file named challenge#.ht
 solution to the first challenge should be saved to a file named ```challenge1.html``` in this
 directory._
 
-1. Add a form element for email address and verify this is correct
-2. Add a form element for phone number and verify that it is a normal US number
-3. Extend the input for the user name by requiring it to be at least 5 charactes
+1. Add a form element for email address and verify this is correct.
+2. Add a form element for phone number and verify that it is a normal US number.
+3. Display a single input on the page. On submit, determine if the text entered by the user is a
+palindrome, and log this to the dev console.
