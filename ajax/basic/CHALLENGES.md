@@ -6,5 +6,5 @@ solution to the first challenge should be saved to a file named ```challenge1.ht
 directory._
 
 1. Display each of the "awesome_things" as a list element "li" in an ordered list "ol" in the order of their rank.
-2. When clicking on an element in these things list, display the imageurl of the awesome thing on
+2. When clicking on an element in the awesome things list, display the imageurl of the awesome thing on
 the right hand side of the page. Your solution should look something [like this](http://i.imgur.com/T4sZMEr.png).
