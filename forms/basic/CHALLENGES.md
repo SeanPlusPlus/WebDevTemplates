@@ -5,7 +5,7 @@ _For each challenge listed below, save your answer to a file named challenge#.ht
 solution to the first challenge should be saved to a file named ```challenge1.html``` in this
 directory._
 
-1. On submit display the character count for the user name.
+1. On submit display the character count for the user name in the dev console.
 2. On submit report the character frequency for all the characters in the user name plus the user
 favorite movie. Sort the characters from most to least common. A tie break should go to the
 character lower in the alphabet. Ignore white space and all punctuation. Cast all characters to
