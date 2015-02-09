@@ -1,22 +1,27 @@
 [
   {
-    "name": "California",
-    "rank": 2
+    "name":   "California",
+    "imgurl": "http://i.imgur.com/HAO9nsA.jpg",
+    "rank":   2
   },
   {
-    "name": "Backpacking",
-    "rank": 3
+    "name":   "Backpacking",
+    "imgurl": "http://i.imgur.com/75cf3T4.jpg",
+    "rank":   3
   },
   {
-    "name": "Chess",
-    "rank": 5
+    "name":   "Chess",
+    "imgurl": "http://i.imgur.com/rM6j6ls.jpg",
+    "rank":   5
   },
   {
-    "name": "Beer",
-    "rank": 4
+    "name":   "Beer",
+    "imgurl": "http://i.imgur.com/SpdToDb.jpg",
+    "rank":   4
   },
   {
-    "name": "Bikes",
-    "rank": 1
+    "name":   "Bikes",
+    "imgurl": "http://i.imgur.com/OLDWBF8.jpg",
+    "rank":   1
   }
 ]
