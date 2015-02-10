@@ -13,8 +13,7 @@ body {
 }
 
 .avatar {
-  height: 200px;
-  width:  200px;
+  width: 100%;
   border-radius: 5px;
 }
 

@@ -18,8 +18,15 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-12">
-          <img ng-src="{{ user.avatar_url }}" class="avatar">
+        <div class="col-md-3">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <img ng-src="{{ user.avatar_url }}" class="avatar">
+            </div>
+            <div class="panel-footer">
+              <a ng-href="{{ user.html_url }}">{{ user.login }}</a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row">
