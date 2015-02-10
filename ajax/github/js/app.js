@@ -14,7 +14,7 @@ angular.module('hello.controllers', []).
     ];
 
     // $q lets us make multiple AJAX calls
-    $q.all(requests).then(function(response) {
-      $scope.user = response[0].data;
+    $q.all(requests).then(function(responses) {
+      $scope.user = responses[0].data;
     });
   }]);
