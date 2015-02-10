@@ -5,4 +5,4 @@ _For each challenge listed below, save your answer to a file named challenge#.ht
 solution to the first challenge should be saved to a file named ```challenge1.html``` in this
 directory._
 
-1. TBD
+1. Display all the users in this class. Your answer should look something [like this](http://i.imgur.com/T4sZMEr.png).
