@@ -18,7 +18,7 @@ angular.module('hello.controllers', []).
       $scope.user = responses[0].data;
     });
 
-    // debug, ex path would be: WebDevTemplates/ajax/github/#?debup
+    // debug, ex path would be: WebDevTemplates/ajax/github/#?debug
     var params = $location.search();
     if ('debug' in params) {
       $scope.debug = true;
