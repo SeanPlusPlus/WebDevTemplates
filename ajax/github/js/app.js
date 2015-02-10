@@ -2,7 +2,7 @@
 
 var hello = angular.module('hello', ['hello.controllers', 'hello.services']);
 angular.module('hello.controllers', []).
-  controller('MainCtrl', ['$scope', 'helloService', '$q', function ($scope, helloService, $q) {
+  controller('MainCtrl', ['$scope', 'helloService', '$q', '$routeParams', function ($scope, helloService, $q, $routeParams) {
 
     // hello msg
     var hello_msg = 'Hitting the GitHub API';
@@ -17,4 +17,9 @@ angular.module('hello.controllers', []).
     $q.all(requests).then(function(responses) {
       $scope.user = responses[0].data;
     });
+
+    // debug
+    if ('debug' in $routeParams) {
+      $scope.debug = true;
+    }
   }]);
