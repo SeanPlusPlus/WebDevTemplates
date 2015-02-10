@@ -2,7 +2,7 @@
 
 var hello = angular.module('hello', ['hello.controllers', 'hello.services']);
 angular.module('hello.controllers', []).
-  controller('MainCtrl', ['$scope', 'helloService', '$q', '$routeParams', function ($scope, helloService, $q, $routeParams) {
+  controller('MainCtrl', ['$scope', 'helloService', '$q', '$location', function ($scope, helloService, $q, $location) {
 
     // hello msg
     var hello_msg = 'Hitting the GitHub API';
@@ -18,8 +18,9 @@ angular.module('hello.controllers', []).
       $scope.user = responses[0].data;
     });
 
-    // debug
-    if ('debug' in $routeParams) {
+    // debug, ex path would be: WebDevTemplates/ajax/github/#?debup
+    var params = $location.search();
+    if ('debug' in params) {
       $scope.debug = true;
     }
   }]);
