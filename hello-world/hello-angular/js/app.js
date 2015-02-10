@@ -14,6 +14,10 @@ angular.module('hello.controllers', []).
       {'name': 'Backpacking'},
       {'name': 'Chess'}
     ];
+
+    // loop over awesome things and add exclamation pt!
+    angular.forEach(awesome_things, function(awesome_thing) {
+      awesome_thing.name += '!';
+    });
     $scope.awesome_things = awesome_things;
-    
   }]);
