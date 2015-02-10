@@ -12,6 +12,10 @@ angular.module('hello.services', []).
         var resource = request.resource;
         var data     = request.data;
 
+        if ('local' in request) {
+          url = 'api/';
+        }
+
         // $http returns a promise, which has a then function, which also returns a promise
         var promise  = $http[method](url + resource, data)
         promise.then(function (response) {
