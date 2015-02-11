@@ -21,17 +21,17 @@
         <div class="col-md-3">
           <div class="panel panel-default">
             <div class="panel-body">
-              <img ng-src="{{ user.avatar_url }}" class="avatar">
+              <h3>{{ quote.query.results.quote.LastTradePriceOnly }}</h3>
             </div>
             <div class="panel-footer">
-              <a ng-href="{{ user.html_url }}">{{ user.login }}</a>
+              {{ quote.query.results.quote.Name }}
             </div>
           </div>
         </div>
       </div>
       <div class="row" ng-show="debug === true">
         <div class="col-md-12">
-          <pre>{{ user | json }}</pre>
+          <pre>{{ quote | json }}</pre>
         </div>
       </div>
     </div>

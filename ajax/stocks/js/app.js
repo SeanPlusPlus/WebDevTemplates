@@ -5,7 +5,7 @@ angular.module('hello.controllers', []).
   controller('MainCtrl', ['$scope', 'helloService', '$q', '$location', function ($scope, helloService, $q, $location) {
 
     // hello msg
-    var hello_msg = 'Hitting the GitHub API';
+    var hello_msg = 'Hitting the Yahoo Finance API';
     $scope.hello_msg = hello_msg;
 
     // build list of AJAX requests
@@ -15,7 +15,8 @@ angular.module('hello.controllers', []).
 
     // $q lets us make multiple AJAX calls
     $q.all(requests).then(function(responses) {
-      $scope.dis = responses[0].data;
+      $scope.quote = responses[0].data;
+      console.log($scope.quote.query.results.quote);
     });
 
     // debug, ex path would be: WebDevTemplates/ajax/github/#?debug
