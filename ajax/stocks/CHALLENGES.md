@@ -5,4 +5,4 @@ _For each challenge listed below, save your answer to a file named challenge#.ht
 solution to the first challenge should be saved to a file named ```challenge1.html``` in this
 directory._
 
-1. TBD
+1. Display an input on the page that accepts a stock symbol (as text). On submit, display the value of the stock.
