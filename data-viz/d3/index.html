@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="css/responsive.css">
   </head>
   <body>
-    <div class="container" id="home">
+    <div class="container" id="home" ng-controller="MainCtrl">
       <div class="row">
         <div class="col-md-12">
           <h1 class="page-header">D3 In Action!</h1>
           <div>
-            <bars data="40,4,55,15,16,33,52,20"></bars>
+            <bars data="{{ data }}"></bars>
           </div>
         </div>
       </div>
