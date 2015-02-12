@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="hello">
+<html ng-app="myApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,25 +10,21 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
   </head>
-  <body ng-cloak>
-    <div class="container" id="home" ng-controller="MainCtrl">
+  <body>
+    <div class="container" id="home">
       <div class="row">
         <div class="col-md-12">
-          <h1 class="page-header">{{ hello_msg }}</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <ul>
-            <li ng-repeat="thing in awesome_things">
-              {{ thing.name }}
-            </li>
-          </ul>
+          <h1 class="page-header">D3 In Action!</h1>
+          <div>
+            <bars data="40,4,55,15,16,33,52,20"></bars>
+          </div>
         </div>
       </div>
     </div>
+
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.10/angular.js"></script>
+    <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="js/app.js"></script>
-    <script src="js/services.js"></script>
+    <script src="js/directives.js"></script>
   </body>
 </html>
