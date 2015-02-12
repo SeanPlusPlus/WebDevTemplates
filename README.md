@@ -7,3 +7,4 @@ _with each project there is a set of challenges that I use when teaching my web 
 1. hello-world
 2. forms
 3. ajax
+4. data-viz
