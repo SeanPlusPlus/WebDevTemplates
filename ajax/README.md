@@ -6,3 +6,4 @@ _[Be conservative in what you do, be liberal in what you accept from others.](ht
 
 1. basic
 2. github
+2. stocks
