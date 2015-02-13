@@ -5,19 +5,20 @@
   <meta charset="utf-8" />
   <title>Angular-charts</title>
   <link rel="stylesheet" href="css/style.css" />
-  <script data-require="angular.js@1.2.2" src="http://code.angularjs.org/1.2.2/angular.js" data-semver="1.2.2"></script>
-  <script data-require="d3@*" data-semver="3.3.11" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.3.11/d3.js"></script>
-  <script type="text/javascript" src="https://rawgit.com/chinmaymk/angular-charts/bower/dist/angular-charts.min.js"></script>
-  <script src="js/app.js"></script>
 </head>
 
-<body ng-controller="MainCtrl">
+<body ng-controller="MainCtrl" ng-cloak>
   <div 
     data-ac-chart="'bar'" 
     data-ac-data="data" 
     data-ac-config="config" 
     class="chart">
   </div>
+
+  <script src="//code.angularjs.org/1.2.2/angular.js" data-semver="1.2.2"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.3.11/d3.js"></script>
+  <script src="//rawgit.com/chinmaymk/angular-charts/bower/dist/angular-charts.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>
