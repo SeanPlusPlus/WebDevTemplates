@@ -1,5 +1,35 @@
-var myApp = angular.module('myApp', ['myApp.controllers', 'myApp.directives']);
-angular.module('myApp.controllers', []).
-  controller('MainCtrl', ['$scope', function ($scope) {
-    $scope.data = "42,4,55,15,16,33,52,2"
-  }]);
+angular.module('plunker', ['angularCharts']);
+
+function MainCtrl($scope) {
+  $scope.config = {
+    title: 'Products',
+    tooltips: true,
+    labels: false,
+    mouseover: function() {},
+    mouseout: function() {},
+    click: function() {},
+    legend: {
+      display: true,
+      //could be 'left, right'
+      position: 'right'
+    }
+  };
+
+  $scope.data = {
+    series: ['Sales', 'Income', 'Expense', 'Laptops', 'Keyboards'],
+    data: [{
+      x: "Laptops",
+      y: [100, 500, 0],
+      tooltip: "this is tooltip"
+    }, {
+      x: "Desktops",
+      y: [300, 100, 100]
+    }, {
+      x: "Mobiles",
+      y: [351]
+    }, {
+      x: "Tablets",
+      y: [54, 0, 879]
+    }]
+  };
+}
