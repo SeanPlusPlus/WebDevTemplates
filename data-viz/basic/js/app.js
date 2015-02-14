@@ -19,23 +19,20 @@ angular.module('hello.controllers', []).
     };
 
     $scope.data = {
-      series: ['60 and up', '30 - 59', '0 - 29'],
+      series: ['65 and over', '18 and uder'],
       data: [{
         x: "California",
-        y: [100, 500, 80],
+        y: [12.5, 23.9],
         tooltip: "this is tooltip"
       }, {
-        x: "Backpacking",
-        y: [300, 100, 490]
+        x: "Texas",
+        y: [11.2, 26.6],
       }, {
-        x: "Chess",
-        y: [35, 201, 12]
+        x: "Florida",
+        y: [18.7, 20.6],
       }, {
-        x: "Beer",
-        y: [651, 55, 200]
-      }, {
-        x: "Bikes",
-        y: [54, 30, 879]
+        x: "New York",
+        y: [14.4, 21.6]
       }]
     };
   }]);
