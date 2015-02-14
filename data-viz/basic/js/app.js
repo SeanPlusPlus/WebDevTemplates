@@ -5,7 +5,7 @@ var hello = angular.module('hello', ['hello.controllers', 'angularCharts']);
 angular.module('hello.controllers', []).
   controller('MainCtrl', ['$scope', function ($scope) {
     $scope.config = {
-      title: 'Awesome things',
+      title: 'Perecentage of residents by age',
       tooltips: true,
       labels: false,
       mouseover: function() {},
