@@ -11,3 +11,7 @@ body {
   padding-top: 20px;
   color: #111;
 }
+
+.thing-wrapper:hover .col-md-4 .panel {
+  background-color: #fafafa;
+}

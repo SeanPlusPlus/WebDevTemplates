@@ -18,17 +18,18 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4" ng-repeat="thing in awesome_things">
-          <div class="panel panel-default">
-            <div class="panel-body">
-              <img ng-src="{{ thing.imgurl }}" class="avatar img-responsive">
-            </div>
-            <div class="panel-footer">
-              <a ng-href="#/{{ thing.name }}">{{ thing.name }}</a>
+        <a ng-href="#/{{ thing.name }}" ng-repeat="thing in awesome_things" class="thing-wrapper">
+          <div class="col-md-4" >
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <img ng-src="{{ thing.imgurl }}" class="avatar img-responsive">
+              </div>
+              <div class="panel-footer">
+                {{ thing.name }}
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </a>
       </div>
     </div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.10/angular.js"></script>
