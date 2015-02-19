@@ -19,7 +19,8 @@ angular.module('hello.controllers', []).
       {"name":   "Backpacking"},
       {"name":   "Chess"},
       {"name":   "Beer"},
-      {"name":   "Bikes"}
+      {"name":   "Bikes"},
+      {"name":   "NASA"}
     ];
     angular.forEach(awesome_things, function(thing) {
       thing.name += '!';
@@ -29,8 +30,7 @@ angular.module('hello.controllers', []).
 
 // Directives
 ///////////////////////////////////////////////////////////////////////////////
-angular.module('hello.directives', []).
-  directive('awesome', [function () {
+angular.module('hello.directives', []).directive('awesome', [function () {
     return {
       restrict: 'E',
       controller: 'AwesomeCtrl',
