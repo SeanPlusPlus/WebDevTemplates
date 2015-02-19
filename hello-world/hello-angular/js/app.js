@@ -1,6 +1,6 @@
 'use strict';
 
-var hello = angular.module('hello', ['hello.controllers']);
+var hello = angular.module('hello', ['hello.controllers', 'hello.directives']);
 
 angular.module('hello.controllers', []).
   controller('MainCtrl', ['$scope', function ($scope) {
@@ -21,4 +21,12 @@ angular.module('hello.controllers', []).
       thing.name += '!';
     });
     $scope.awesome_things = awesome_things;
+  }]);
+
+angular.module('hello.directives', []).
+  directive('awesome', [function () {
+    return {
+      restrict: "E",
+      template: "<div>Hello, world!</div>"
+    };
   }]);

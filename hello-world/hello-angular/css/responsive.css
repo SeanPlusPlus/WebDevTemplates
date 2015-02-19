@@ -2,11 +2,7 @@
 /* No media query since this is the default in Bootstrap */
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  body {
-    background-color: #DDD;
-  }
-}
+@media (min-width: 768px) {}
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {}
