@@ -5,4 +5,5 @@ _For each challenge listed below, save your answer to a file named challenge#.ht
 solution to the first challenge should be saved to a file named ```challenge1.html``` in this
 directory._
 
-1. TBD
+1. Add another image to the page and animate it to grow / shrink at a different rate and to a
+different size than the one there.
