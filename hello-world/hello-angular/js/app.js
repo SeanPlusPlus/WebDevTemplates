@@ -2,14 +2,18 @@
 
 var hello = angular.module('hello', ['hello.controllers', 'hello.directives']);
 
+// Controllers
+///////////////////////////////////////////////////////////////////////////////
 angular.module('hello.controllers', []).
-  controller('MainCtrl', ['$scope', function ($scope) {
 
-    // hello msg
+  // Main Controller
+  controller('MainCtrl', ['$scope', function ($scope) {
     var hello_msg = 'Some Awesome Things';
     $scope.hello_msg = hello_msg;
+  }]).
 
-    // awesome things
+  // Awesome Controller
+  controller('AwesomeCtrl', ['$scope', function ($scope) {
     var awesome_things = [
       {"name":   "California"},
       {"name":   "Backpacking"},
@@ -23,10 +27,12 @@ angular.module('hello.controllers', []).
     $scope.awesome_things = awesome_things;
   }]);
 
+// Directives
+///////////////////////////////////////////////////////////////////////////////
 angular.module('hello.directives', []).
-  directive('awesome', [function () {
+  directive('myAwesome', [function () {
     return {
-      restrict: "E",
-      template: "<div>Hello, world!</div>"
+      restrict: 'E',
+      templateUrl: 'awesome.html'
     };
   }]);
