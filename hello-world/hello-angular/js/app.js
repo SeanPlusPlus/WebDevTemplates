@@ -33,6 +33,7 @@ angular.module('hello.directives', []).
   directive('myAwesome', [function () {
     return {
       restrict: 'E',
+      controller: 'AwesomeCtrl',
       templateUrl: 'partials/awesome.html'
     };
   }]);
