@@ -5,7 +5,7 @@
   var foo = null; // object
 
   function shrink() {
-    if (parseInt(foo.style.width.split('px')[0]) === 0) {
+    if (parseInt(foo.style.width.split('px')[0]) === 100) {
       grow();
     }
     else {
@@ -16,7 +16,7 @@
   }
 
   function grow() {
-    if (parseInt(foo.style.width.split('px')[0]) === 100) {
+    if (parseInt(foo.style.width.split('px')[0]) === 300) {
       shrink();
     }
     else {
@@ -27,9 +27,9 @@
   }
 
   function init() {
-    foo = document.getElementById('green'); 
-    foo.style.width  = '50px'; 
-    foo.style.height = '50px'; 
+    foo = document.getElementById('main'); 
+    foo.style.width  = '100px'; 
+    foo.style.height = '100px'; 
     grow(); 
   }
 
