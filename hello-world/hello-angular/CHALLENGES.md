@@ -11,3 +11,4 @@ to uppercase when you click on the thing.
 3. Write a function that prints the numbers from 1 to 100. But for multiples of three print ```Fizz```
 instead of the number and for the multiples of five print ```Buzz```. For numbers which are multiples of
 both three and five print ```FizzBuzz```.
+4. Move the controller and the directive to separate files.
