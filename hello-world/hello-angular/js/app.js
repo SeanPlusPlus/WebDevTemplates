@@ -30,7 +30,7 @@ angular.module('hello.controllers', []).
 // Directives
 ///////////////////////////////////////////////////////////////////////////////
 angular.module('hello.directives', []).
-  directive('myAwesome', [function () {
+  directive('awesome', [function () {
     return {
       restrict: 'E',
       controller: 'AwesomeCtrl',
