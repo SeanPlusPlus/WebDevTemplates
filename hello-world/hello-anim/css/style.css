@@ -1,0 +1,9 @@
+body {
+  padding-top: 60px;
+}
+
+#green {
+  background: green;
+  border-radius: 50%;
+  display: inline-block;
+}
