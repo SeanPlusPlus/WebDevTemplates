@@ -5,4 +5,4 @@ _For each challenge listed below, save your answer to a file named challenge#.ht
 solution to the first challenge should be saved to a file named ```challenge1.html``` in this
 directory._
 
-!. Place the text "Hello World!" inside of an ```<h1>``` tag, instead of the ```<p>``` tag.
+1. Place the text "Hello World!" inside of an ```<h1>``` tag, instead of the ```<p>``` tag.
