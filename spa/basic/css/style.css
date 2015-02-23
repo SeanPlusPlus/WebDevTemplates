@@ -15,3 +15,7 @@ body {
 .thing-wrapper:hover .col-md-4 .panel {
   background-color: #fafafa;
 }
+
+.page-header > a.icon-wrap:hover {
+  text-decoration: none;
+}
