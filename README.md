@@ -5,7 +5,7 @@ _a collection of my front end templates that I use as starting points for rapid 
 _with each project there is a set of challenges that I use when teaching my web dev class_
 
 1. [hello-world](https://github.com/SeanPlusPlus/WebDevTemplates/tree/master/hello-world)
-2. forms
-3. ajax
-4. data-viz
-5. spa
+2. [forms](https://github.com/SeanPlusPlus/WebDevTemplates/tree/master/forms)
+3. [ajax](https://github.com/SeanPlusPlus/WebDevTemplates/tree/master/ajax)
+4. [data-viz](https://github.com/SeanPlusPlus/WebDevTemplates/tree/master/data-viz)
+5. [spa](https://github.com/SeanPlusPlus/WebDevTemplates/tree/master/spa)
