@@ -24,12 +24,9 @@ angular.module('hello.controllers', []).
   controller('ThingCtrl', ['$scope', 'helloService', '$routeParams', 
       function ($scope, helloService, $routeParams) {
 ///////////////////////////////////////////////////////////////////////////////
-    var request = {'method': 'get', 'resource': 'awesome.json'};
+    var name = $routeParams.thing;
+    var request = {'method': 'get', 'resource': name + '.json'};
     helloService.async(request).then(function(response) {
-      angular.forEach(response.data, function(thing) {
-        if (thing.name === $routeParams.thing) {
-          $scope.thing = thing;
-        }
-      });
+      $scope.thing = response.data;
     });
   }]);
