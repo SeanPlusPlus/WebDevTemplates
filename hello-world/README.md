@@ -8,3 +8,4 @@ _starting with HTML and building up with each technology_
 4. hello-js
 5. hello-angular
 6. hello-anim
+7. hello-closures
