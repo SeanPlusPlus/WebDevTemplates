@@ -1,7 +1,6 @@
 'use strict';
 
-var hello = angular.module('hello', ['hello.controllers', 'hello.services', 'ngRoute']);
-
+var hello = angular.module('hello', ['hello.controllers', 'hello.services', 'hello.directives', 'ngRoute']);
 
 // routes
 hello.config(['$routeProvider',
