@@ -2,9 +2,9 @@
 
 var hello = angular.module('hello', ['hello.controllers', 'hello.directives']);
 
-// Controllers
 ///////////////////////////////////////////////////////////////////////////////
 angular.module('hello.controllers', []).
+///////////////////////////////////////////////////////////////////////////////
 
   // Main Controller
   controller('MainCtrl', ['$scope', function ($scope) {
@@ -28,9 +28,9 @@ angular.module('hello.controllers', []).
     $scope.awesome_things = awesome_things;
   }]);
 
-// Directives
 ///////////////////////////////////////////////////////////////////////////////
 angular.module('hello.directives', []).directive('awesome', [function () {
+///////////////////////////////////////////////////////////////////////////////
     return {
       restrict: 'E',
       controller: 'AwesomeCtrl',
