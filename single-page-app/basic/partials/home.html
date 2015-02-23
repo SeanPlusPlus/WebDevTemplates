@@ -1,0 +1,23 @@
+<div class="container" id="home">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="page-header">
+        <i class="fa fa-home"></i>
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <a ng-href="#/{{ thing.name }}" ng-repeat="thing in awesome_things" class="thing-wrapper">
+      <div class="col-md-4" >
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <img ng-src="{{ thing.imgurl }}" class="avatar img-responsive">
+          </div>
+          <div class="panel-footer">
+            {{ thing.name }}
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

@@ -8,10 +8,14 @@
 }
 
 body {
-  padding-top: 20px;
+  padding-top: 50px;
   color: #111;
 }
 
 .thing-wrapper:hover .col-md-4 .panel {
   background-color: #fafafa;
+}
+
+.page-header > a.icon-wrap:hover {
+  text-decoration: none;
 }
