@@ -20,6 +20,11 @@ _starting with HTML and building up with each technology_
 - [Code School: Shaping up with Angular.js](https://www.codeschool.com/courses/shaping-up-with-angular-js)
 - [Code School: Mastering GitHub](https://www.codeschool.com/courses/mastering-github)
 
+### Styleguides
+
+- [Bootstrap](http://getbootstrap.com/)
+- [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
+
 ### JavaScript Books
 
 - [Speaking JavaScript](http://speakingjs.com/es5/ch01.html#_syntax)
