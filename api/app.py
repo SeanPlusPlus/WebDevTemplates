@@ -7,13 +7,13 @@ from cors import crossdomain
 
 app = Flask(__name__)
 api = restful.Api(app, decorators=[crossdomain('*')])
-
-##############################################################################
-# database stuff START
-##############################################################################
-
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
 db = SQLAlchemy(app)
+
+
+##############################################################################
+# Database Model
+##############################################################################
 
 class Tag(db.Model):
     id = db.Column(db.Integer, primary_key=True)
