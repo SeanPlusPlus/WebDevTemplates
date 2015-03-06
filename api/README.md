@@ -31,7 +31,7 @@ python
 python app.py
 ```
 
-### Check out your sweet API:
+### Check out your sweet API (open a new shell):
 
 ```
 curl http://localost:5000/
