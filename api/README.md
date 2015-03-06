@@ -17,10 +17,9 @@ python
 ### Using the python interpreter create db and add data
 
 ```
->>> from app import db
+>>> from app import db, Tag
 >>> db.create_all()
->>> from app import models
->>> t = models.Tag('my first tag')
+>>> t = Tag('my first tag')
 >>> db.session.add(t)
 >>> db.session.commit()
 >>> exit()

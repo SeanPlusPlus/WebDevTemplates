@@ -6,18 +6,64 @@ from cors import crossdomain
 
 # configure the application and the database
 app = Flask(__name__)
-api = restful.Api(app, decorators=[crossdomain('*')])
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
 db = SQLAlchemy(app)
 
-# import the models and the views
-import models
-import views
+
+##############################################################################
+class Tag(db.Model):
+##############################################################################
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(140), unique=True)
+
+    def __init__(self, name):
+        self.name = name
+
+    def __repr__(self):
+        return '<Tag %r>' % self.name
+
+
+##############################################################################
+class Main(restful.Resource):
+##############################################################################
+    def get(self):
+        return {
+            'resources': [
+                'tags/:id',
+                'tags',
+            ]
+        }
+
+
+##############################################################################
+class TagDetail(restful.Resource):
+##############################################################################
+    def get(self, tag_id):
+        return {'lookup': tag_id},
+
+
+##############################################################################
+class TagList(restful.Resource):
+##############################################################################
+    def get(self):
+        tags = []
+        for tag in Tag.query.all():
+            tags.append({'name': tag.name, 'id': tag.id})
+        return tags
+
+    def post(self):
+        tag = Tag(request.json['name'])
+        db.session.add(tag)
+        db.session.commit()
+        return {'name': tag.name, 'id': tag.id}
+
 
 # configure the routes
-api.add_resource(views.HelloWorld, '/')
-api.add_resource(views.TagList, '/tags')
-api.add_resource(views.TagDetail, '/tags/<string:tag_id>')
+api = restful.Api(app, decorators=[crossdomain('*')])
+api.add_resource(Main,      '/')
+api.add_resource(TagList,   '/tags')
+api.add_resource(TagDetail, '/tags/<string:tag_id>')
 
 
 # run the application
