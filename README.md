@@ -9,3 +9,4 @@ _with each project there is a set of challenges that I use when teaching my web 
 3. [ajax](https://github.com/SeanPlusPlus/WebDevTemplates/tree/master/ajax)
 4. [data-viz](https://github.com/SeanPlusPlus/WebDevTemplates/tree/master/data-viz)
 5. [single-page-app](https://github.com/SeanPlusPlus/WebDevTemplates/tree/master/single-page-app)
+6. [api](https://github.com/SeanPlusPlus/WebDevTemplates/tree/master/api)
