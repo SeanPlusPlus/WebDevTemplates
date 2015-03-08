@@ -2,7 +2,9 @@ from flask import Flask, request
 from flask.ext import restful
 from datetime import timedelta
 from flask.ext.sqlalchemy import SQLAlchemy
+from sqlalchemy.exc import IntegrityError
 from cors import crossdomain
+import sanitize
 
 # configure the application and the database
 app = Flask(__name__)
@@ -53,9 +55,15 @@ class TagList(restful.Resource):
         return tags
 
     def post(self):
-        tag = Tag(request.json['name'])
+        req = sanitize.tag(request.json)
+        if 'error' in req:
+            return {'message': data['error']['message']}, data['error']['code']
+        tag = Tag(req['name'])
         db.session.add(tag)
-        db.session.commit()
+        try:
+            db.session.commit()
+        except IntegrityError:
+            return {'message': 'duplicate key exists'}, 302
         return {'name': tag.name, 'id': tag.id}
 
 
