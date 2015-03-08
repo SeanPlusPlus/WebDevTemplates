@@ -6,7 +6,7 @@ def tag(req, tags):
     if 'name' not in req:
         data['error'] = {'message': 'name required', 'code': 400}
         return data 
-    if isiinstance(req['name'], basestring) == False:
+    if isinstance(req['name'], basestring) == False:
         data['error'] = {'message': 'name must be string', 'code': 400}
         return data 
     if len(req['name']) == 0:
