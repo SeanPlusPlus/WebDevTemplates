@@ -41,4 +41,4 @@ curl http://localhost:5000/tags
 
 ### Check out the Swagger docs:
 
-http://localhost:5000/api/spec.html
+[http://localhost:5000/api/spec.html](http://localhost:5000/api/spec.html)
