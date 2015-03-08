@@ -85,7 +85,7 @@ class TagList(restful.Resource):
         return tags
 
     def post(self):
-        req = sanitize.tag(request.json)
+        req = sanitize.tag(request.json, Tag.query.all())
         if 'error' in req:
             return {'message': data['error']['message']}, data['error']['code']
         tag = Tag(req['name'])
