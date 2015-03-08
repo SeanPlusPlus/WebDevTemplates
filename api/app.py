@@ -47,8 +47,8 @@ class TagDetail(restful.Resource):
     @swagger.operation(
         notes='some really good notes',
         responseClass=Tag.__name__,
-        nickname='upload',
-        parameters=[
+        nickname = 'upload',
+        parameters = [
             {
               "name": "body",
               "description": "blueprint object that needs to be added. YAML.",
@@ -58,7 +58,7 @@ class TagDetail(restful.Resource):
               "paramType": "body"
             }
           ],
-        responseMessages=[
+        responseMessages = [
             {
               "code": 201,
               "message": "Created. The URL of the created blueprint should be in the Location header"
@@ -69,7 +69,6 @@ class TagDetail(restful.Resource):
             }
           ]
         )
-
 
     def get(self, tag_name):
         tag = Tag.query.filter_by(name=tag_name).first()
