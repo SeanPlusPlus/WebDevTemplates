@@ -3,11 +3,13 @@ from flask.ext import restful
 from datetime import timedelta
 from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import IntegrityError
+from flask_restful_swagger import swagger
 from cors import crossdomain
 import sanitize
 
 # configure the application and the database
 app = Flask(__name__)
+api = swagger.docs(restful.Api(app, decorators=[crossdomain('*')]), apiVersion='0.1')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
 db = SQLAlchemy(app)
 
@@ -41,6 +43,34 @@ class Main(restful.Resource):
 ##############################################################################
 class TagDetail(restful.Resource):
 ##############################################################################
+
+    @swagger.operation(
+        notes='some really good notes',
+        responseClass=Tag.__name__,
+        nickname='upload',
+        parameters=[
+            {
+              "name": "body",
+              "description": "blueprint object that needs to be added. YAML.",
+              "required": True,
+              "allowMultiple": False,
+              "dataType": "",
+              "paramType": "body"
+            }
+          ],
+        responseMessages=[
+            {
+              "code": 201,
+              "message": "Created. The URL of the created blueprint should be in the Location header"
+            },
+            {
+              "code": 405,
+              "message": "Invalid input"
+            }
+          ]
+        )
+
+
     def get(self, tag_id):
         return {'lookup': tag_id},
 
@@ -68,7 +98,6 @@ class TagList(restful.Resource):
 
 
 # configure the routes
-api = restful.Api(app, decorators=[crossdomain('*')])
 api.add_resource(Main,      '/')
 api.add_resource(TagList,   '/tags')
 api.add_resource(TagDetail, '/tags/<string:tag_id>')
