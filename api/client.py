@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import pycurl
 from StringIO import StringIO
+import json
 
 # make sure to:
 # 
@@ -20,8 +21,8 @@ def main():
     c.close()
 
     body = buffer.getvalue()
-    print body
-    print len(body)
+    data = json.loads(body)
+    print data
 
 if __name__ == '__main__':
     main()
