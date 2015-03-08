@@ -34,7 +34,7 @@ class Main(restful.Resource):
     def get(self):
         return {
             'resources': [
-                'tags/:id',
+                'tags/:name',
                 'tags',
             ]
         }
@@ -71,8 +71,9 @@ class TagDetail(restful.Resource):
         )
 
 
-    def get(self, tag_id):
-        return {'lookup': tag_id},
+    def get(self, tag_name):
+        tag = Tag.query.filter_by(name=tag_name).first()
+        return helpers.row2dict(name)
 
 
 ##############################################################################
@@ -93,14 +94,17 @@ class TagList(restful.Resource):
         try:
             db.session.commit()
         except IntegrityError:
-            return {'message': 'duplicate key exists'}, 302
+            return {
+                'message': 'tag exists',
+                'tag': req['name']
+            }, 302
         return {'name': tag.name, 'id': tag.id}
 
 
 # configure the routes
 api.add_resource(Main,      '/')
 api.add_resource(TagList,   '/tags')
-api.add_resource(TagDetail, '/tags/<string:tag_id>')
+api.add_resource(TagDetail, '/tags/<string:tag_name>')
 
 
 # run the application
