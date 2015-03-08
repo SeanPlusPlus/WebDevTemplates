@@ -5,7 +5,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import IntegrityError
 from flask_restful_swagger import swagger
 from cors import crossdomain
-import sanitize
+import sanitize, serialize
 
 # configure the application and the database
 app = Flask(__name__)
@@ -73,16 +73,14 @@ class TagDetail(restful.Resource):
 
     def get(self, tag_name):
         tag = Tag.query.filter_by(name=tag_name).first()
-        return helpers.row2dict(name)
+        return {'tag': tag.name}
 
 
 ##############################################################################
 class TagList(restful.Resource):
 ##############################################################################
     def get(self):
-        tags = []
-        for tag in Tag.query.all():
-            tags.append({'name': tag.name, 'id': tag.id})
+        tags = serialize.tags(Tag.query.all())
         return tags
 
     def post(self):
