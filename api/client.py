@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 import pycurl
-from StringIO import StringIO
+import cStringIO
 import json
 import random
-
 
 # make sure to:
 # 
@@ -49,19 +48,18 @@ def get():
 ###############################################################################
 
     # initialize
-    buffer = StringIO()
     api = 'http://localhost:5000/tags'
+    buf = cStringIO.StringIO()
 
-    # run
+    # run 
     c = pycurl.Curl()
     c.setopt(c.URL, api)
-    c.setopt(c.WRITEDATA, buffer)
+    c.setopt(c.WRITEFUNCTION, buf.write)
     c.perform()
-    c.close()
 
     # display
-    body = buffer.getvalue()
-    data = json.loads(body)
+    data = json.loads(buf.getvalue())
+    buf.close()
     print data
 
 
