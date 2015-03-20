@@ -7,7 +7,20 @@ first challenge should be in a directory named ```challenge1/``` inside of this 
 
 1. Display a single input on the page. On submit count all of the characters that the user
 entereed. Display your answer in the dev console.
-2. Display a single input on the page. On submit report the character frequency for all the characters the user
+2. Display a single input on the page. The input should only accept integer values. 
+On submit, draw a triangle on the page using asteriks ```*``` where the length and
+width of the triangle is determined by the user input. As an example, if the user entered ```7```, 
+your output should look somthing like this:
+```
+*
+**
+***
+****
+*****
+******
+*******
+```
+3. Display a single input on the page. On submit report the character frequency for all the characters the user
 entered. Sort the characters from most to least common. A tie break should go to the
 character lower in the alphabet. Ignore white space and all punctuation. Cast all characters to
 lower case. Only display ASCII characters. Wrap your output in a ```<ul>``` tag with an ```<li>``` for each row. 
