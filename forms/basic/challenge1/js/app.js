@@ -10,8 +10,16 @@ angular.module('hello.controllers', []).
 
     // submit form callback
     $scope.submit_data = function() {
-      console.log($scope.user);
-      console.log($scope.user.entry);
-      console.log($scope.user.entry.split(''));
+      var arr = $scope.user.entry.split('');
+      var output = {};
+      angular.forEach(arr, function(element) {
+        if (element in output) {
+          output[element] = output[element] + 1;
+        }
+        else {
+          output[element] = 1;
+        }
+      });
+      console.log(output);
     }
   }]);
