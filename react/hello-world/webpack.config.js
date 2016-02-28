@@ -8,14 +8,17 @@ module.exports = {
     path: path.join(__dirname, 'lib', 'js'),
   },
   module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        loaders: ['babel-loader?stage=0'],
-        include: __dirname,
-        exclude: /node_modules/,
-      },
-    ],
+      loaders: [
+          {
+              test: /\.js$/,
+              loader: ‘babel’,
+              query: {
+                  // https://github.com/babel/babel-loader#options
+                  cacheDirectory: true,
+                  presets: ['es2015', 'stage-2']
+              }
+          }
+      ],
   },
   plugins: [
     new webpack.DefinePlugin({
