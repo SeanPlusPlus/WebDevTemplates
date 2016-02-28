@@ -1,2 +1,4 @@
 api/venv/
 *.pyc*
+node_modules/
+
