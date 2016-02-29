@@ -1,4 +1,4 @@
 api/venv/
 *.pyc*
 node_modules/
-react/hello-world/lib/
+hello-world/hello-react/lib/
