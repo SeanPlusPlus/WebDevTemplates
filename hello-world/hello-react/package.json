@@ -42,6 +42,7 @@
     "babel-polyfill": "^6.0.0",
     "babel-preset-es2015": "^6.5.0",
     "babel-preset-react": "^6.5.0",
+    "bootstrap": "^3.3.6",
     "jest-cli": "^0.8.2",
     "live-server": "^0.8.2",
     "react": "^0.14.6",
