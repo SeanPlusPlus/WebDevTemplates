@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as $ from 'jquery';
+import { Alert } from 'react-bootstrap';
 
 var HelloAjax = React.createClass({
   getInitialState: function() {
@@ -25,9 +26,9 @@ var HelloAjax = React.createClass({
 
   render: function() {
     return (
-      <div className='alert alert-info'>
+      <Alert bsStyle='success'>
         {this.state.message}
-      </div>
+      </Alert>
     );
   },
 });
