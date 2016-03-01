@@ -1,5 +1,5 @@
 // __tests__/HelloWorld-test.js
-var path = '../src/hello';
+var path = '../src/home';
 
 jest.dontMock(path)
     .dontMock('jquery');
