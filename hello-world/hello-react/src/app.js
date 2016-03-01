@@ -1,9 +1,9 @@
 // hello.js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HelloWorld from './hello';
+import Home from './home';
 
 ReactDOM.render(
-  <HelloWorld />,
-  document.getElementById('hello')
+  <Home />,
+  document.getElementById('main')
 );
