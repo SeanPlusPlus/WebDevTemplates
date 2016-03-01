@@ -5,7 +5,7 @@ export function getSessionDetail() {
 
   var fetch = function() {
     var api = new API();
-    var url = api.host + 'session' + api.ext;
+    var url = api.host + 'session';
     return $.ajax({
       url: url,
       dataType: 'json',

@@ -5,7 +5,7 @@ export function getHomeDetail() {
 
   var fetch = function() {
     var api = new API();
-    var url = api.host + 'home' + api.ext;
+    var url = api.host + 'home';
     return $.ajax({
       url: url,
       dataType: 'json',
