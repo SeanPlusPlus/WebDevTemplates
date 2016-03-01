@@ -1,4 +1,0 @@
-flask 
-flask-restful 
-Flask-SQLAlchemy
-flask-restful-swagger
