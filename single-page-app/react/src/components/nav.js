@@ -25,7 +25,6 @@ class Nav extends React.Component {
           </div>
           <div id='navbar' className='navbar-collapse collapse'>
             <ul className='nav navbar-nav navbar-right'>
-              {this.props.session.item.role === 'site admin' ? <li><a href='/'><i className='fa fa-gear'></i> Admin</a></li> : null}
               <li className='active'><a><i className='fa fa-user'></i> {this.props.session.item.login}</a></li>
             </ul>
           </div>
