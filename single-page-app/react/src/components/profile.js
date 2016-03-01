@@ -36,6 +36,16 @@ class Profile extends React.Component {
               <label>Login: </label>
               <code>{this.props.session.item.login}</code>
             </div>
+            {
+              this.props.session.item.role === 'site admin'
+              ?
+              <div>
+                <label>Role: </label>
+                <code>{this.props.session.item.role}</code>
+              </div>
+              :
+              null
+            }
           </Panel>
         </div>
       </div>
