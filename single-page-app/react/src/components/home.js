@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as $ from 'jquery';
 import { Modal, Button } from 'react-bootstrap';
-import { API } from './api';
+import { API } from '../api';
 
 class Home extends React.Component {
   constructor(props) {
