@@ -3,3 +3,4 @@ api/venv/
 node_modules/
 hello-world/hello-react/lib/
 single-page-app/react/lib/
+full-stack/app/lib/
