@@ -12,6 +12,7 @@ set up the api
 cd full-stack/api
 virtualenv venv
 . venv/bin/activate
+pip install -r requirements.txt
 python app.py
 ```
 
