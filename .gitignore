@@ -2,3 +2,4 @@ api/venv/
 *.pyc*
 node_modules/
 hello-world/hello-react/lib/
+single-page-app/react/lib/
