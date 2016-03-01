@@ -1,7 +1,11 @@
 // home.js
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { connect } from 'react-redux';
 import * as $ from 'jquery';
+import Nav from './nav';
+import { getSessionDetail } from '../actions/session';
+import { Panel } from 'react-bootstrap';
 
 class Profile extends React.Component {
   constructor(props) {
@@ -11,19 +15,43 @@ class Profile extends React.Component {
     };
   }
 
-  componentWillUnmount() {
-    this.serverRequest.abort();
+  componentWillMount() {
+    this.props.getSessionDetail();
   }
 
   render() {
     return (
-      <div className='container'>
-        <h1 className='page-header'>
-          {this.state.title}
-        </h1>
+      <div>
+        <Nav />
+        <div className='container'>
+          <h1 className='page-header'>
+            {this.state.title}
+          </h1>
+          <Panel>
+            <div>
+              <label>Name: </label>
+              <code>{this.props.session.item.name}</code>
+            </div>
+            <div>
+              <label>Login: </label>
+              <code>{this.props.session.item.login}</code>
+            </div>
+          </Panel>
+        </div>
       </div>
     );
   }
 };
 
-export default Profile;
+function mapStateToProps(state, ownProps) {
+  const session = state.session;
+  return {
+    session,
+  };
+}
+
+const mapActionsToProps = {
+  getSessionDetail,
+};
+
+export default connect(mapStateToProps, mapActionsToProps)(Profile);

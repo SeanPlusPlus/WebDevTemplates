@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import * as $ from 'jquery';
 import { Modal, Button } from 'react-bootstrap';
 import { API } from '../api';
+import Nav from './nav';
 
 class Home extends React.Component {
   constructor(props) {
@@ -45,33 +46,36 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div className='container'>
-        <h1 className='page-header'>
-          {this.state.title}
-        </h1>
-        <div className='btn-group btn-group-justified'>
-          <div className='btn-group'>
-            <a href='/profile' className='btn btn-primary btn-lg'>
-              <i className='fa fa-user'></i> profile
-            </a>
+      <div>
+        <Nav />
+        <div className='container'>
+          <h1 className='page-header'>
+            {this.state.title}
+          </h1>
+          <div className='btn-group btn-group-justified'>
+            <div className='btn-group'>
+              <a href='/profile' className='btn btn-primary btn-lg'>
+                <i className='fa fa-user'></i> profile
+              </a>
+            </div>
+            <div className='btn-group'>
+              <Button onClick={this.open} bsStyle='success' className='btn-lg'>
+                <i className='fa fa-check'></i> {this.state.message}
+              </Button>
+            </div>
           </div>
-          <div className='btn-group'>
-            <Button onClick={this.open} bsStyle='success' className='btn-lg'>
-              <i className='fa fa-check'></i> {this.state.message}
-            </Button>
-          </div>
+          <Modal show={this.state.showModal} onHide={this.close} bsSize='large'>
+            <Modal.Header closeButton>
+              <Modal.Title>Request Detail</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <code>{this.state.detail}</code>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button onClick={this.close}>Close</Button>
+            </Modal.Footer>
+          </Modal>
         </div>
-        <Modal show={this.state.showModal} onHide={this.close} bsSize='large'>
-          <Modal.Header closeButton>
-            <Modal.Title>Request Detail</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <code>{this.state.detail}</code>
-          </Modal.Body>
-          <Modal.Footer>
-            <Button onClick={this.close}>Close</Button>
-          </Modal.Footer>
-        </Modal>
       </div>
     );
   }
