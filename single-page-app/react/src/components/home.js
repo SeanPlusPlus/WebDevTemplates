@@ -1,39 +1,26 @@
 // home.js
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { connect } from 'react-redux';
 import * as $ from 'jquery';
 import { Modal, Button } from 'react-bootstrap';
 import { API } from '../api';
 import Nav from './nav';
+import { getHomeDetail } from '../actions/home';
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       title: 'Hello World',
-      resource: 'hello',
-      message: '',
-      detail: '',
       showModal: false,
     };
     this.close = this.close.bind(this);
     this.open = this.open.bind(this);
   }
 
-  componentDidMount() {
-    var api = new API();
-    var url = api.host + this.state.resource + api.ext;
-    this.serverRequest = $.get(url, function (result) {
-      var data = result;
-      this.setState({
-        message: data.message,
-        detail: data.detail,
-      });
-    }.bind(this));
-  }
-
-  componentWillUnmount() {
-    this.serverRequest.abort();
+  componentWillMount() {
+    this.props.getHomeDetail();
   }
 
   close() {
@@ -60,7 +47,7 @@ class Home extends React.Component {
             </div>
             <div className='btn-group'>
               <Button onClick={this.open} bsStyle='success' className='btn-lg'>
-                <i className='fa fa-check'></i> {this.state.message}
+                <i className='fa fa-check'></i> {this.props.home.item.message}
               </Button>
             </div>
           </div>
@@ -69,7 +56,7 @@ class Home extends React.Component {
               <Modal.Title>Request Detail</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              <code>{this.state.detail}</code>
+              <code>{this.props.home.item.detail}</code>
             </Modal.Body>
             <Modal.Footer>
               <Button onClick={this.close}>Close</Button>
@@ -81,4 +68,15 @@ class Home extends React.Component {
   }
 };
 
-export default Home;
+function mapStateToProps(state, ownProps) {
+  const home = state.home;
+  return {
+    home,
+  };
+}
+
+const mapActionsToProps = {
+  getHomeDetail,
+};
+
+export default connect(mapStateToProps, mapActionsToProps)(Home);
