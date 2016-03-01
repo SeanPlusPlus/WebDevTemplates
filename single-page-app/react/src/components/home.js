@@ -49,9 +49,18 @@ class Home extends React.Component {
         <h1 className='page-header'>
           {this.state.title}
         </h1>
-        <Button onClick={this.open} bsStyle='primary'>
-          {this.state.message}
-        </Button>
+        <div className='btn-group btn-group-justified'>
+          <div className='btn-group'>
+            <a href='/profile' className='btn btn-primary btn-lg'>
+              <i className='fa fa-user'></i> profile
+            </a>
+          </div>
+          <div className='btn-group'>
+            <Button onClick={this.open} bsStyle='success' className='btn-lg'>
+              <i className='fa fa-check'></i> {this.state.message}
+            </Button>
+          </div>
+        </div>
         <Modal show={this.state.showModal} onHide={this.close} bsSize='large'>
           <Modal.Header closeButton>
             <Modal.Title>Request Detail</Modal.Title>
