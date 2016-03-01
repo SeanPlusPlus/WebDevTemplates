@@ -4,7 +4,7 @@ class API {
     var port = window.location.port;
 
     // update host port if needed in dev
-    this.host = 'http://localhost:' + port + '/api/';
+    this.host = '//' + host + ':' + port + '/api/';
     this.ext = '.json';
   }
 
