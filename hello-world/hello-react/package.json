@@ -44,6 +44,7 @@
     "babel-preset-react": "^6.5.0",
     "bootstrap": "^3.3.6",
     "jest-cli": "^0.8.2",
+    "jquery": "^2.2.1",
     "live-server": "^0.8.2",
     "react": "^0.14.6",
     "react-addons-test-utils": "^0.14.7",
