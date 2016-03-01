@@ -9,7 +9,8 @@
   "description": "hello world",
   "scripts": {
     "test": "jest",
-    "start": "./node_modules/.bin/webpack --progress --watch & ./node_modules/.bin/live-server --entry-file=index.html --ignore=src"
+    "start": "./node_modules/.bin/webpack --progress --watch & ./node_modules/.bin/live-server --entry-file=index.html --ignore=src",
+    "minify": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.config.min.js"
   },
   "author": "stoked",
   "license": "ISC",
